@@ -35,18 +35,16 @@ while True:
 		resized_frame = resized_frame / 255
 
 		# Obtendo previsões do modelo
-		predictions = mymodel.predict(resized_frame)
+		
 
 		# Convertendo os dados do array para percentual de confiança 
-		rock = int(predictions[0][0]*100)
-		paper = int(predictions[0][1]*100)
-		scissor = int(predictions[0][2]*100)
+		
 
 		# Imprimindo o percentual de confiança
-		print(f"Pedra: {rock} %, Papel: {paper} %, Tesoura: {scissor} %")
+		
 
 		# Exibindo os quadros capturados
-		cv2.imshow('feed' , frame)
+		
 
 		# Aguardando 1ms
 		code = cv2.waitKey(1)
